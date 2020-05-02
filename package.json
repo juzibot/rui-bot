@@ -26,19 +26,19 @@
   },
   "homepage": "https://github.com/chatie/heroku-wechaty-getting-started#readme",
   "dependencies": {
-    "@chatie/tsconfig": "^0.6.1",
-    "@hapi/hapi": "^18.3.1",
-    "@types/hapi__hapi": "^18.2.5",
+    "@chatie/tsconfig": "^0.10.1",
+    "@hapi/hapi": "^19.1.1",
+    "@types/hapi__hapi": "^19.0.3",
     "@types/raven": "^2.5.1",
     "@types/read-pkg-up": "^6.0.0",
     "brolog": "^1.6.5",
     "finis": "^0.4.3",
     "read-pkg-up": "^7.0.1",
-    "wechaty": "^0.29.8"
+    "wechaty": "^0.38.4"
   },
   "devDependencies": {
     "@chatie/eslint-config": "^0.8.1",
-    "@chatie/git-scripts": "^0.2.5",
+    "@chatie/git-scripts": "^0.6.1",
     "tstest": "^0.4.2"
   },
   "git": {
