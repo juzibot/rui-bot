@@ -25,4 +25,4 @@ It has the following functions:
 
 ## AUTHOR
 
-[Jiarui Li (李佳芮)](https://pre-angel.com/peoples/jiarui-li/) \<ruiruibupt@gmail.com\>
+[Jiarui Li (李佳芮)](https://pre-angel.com/peoples/jiarui-li/) \<rui@juzi.bot\>
