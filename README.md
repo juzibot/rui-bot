@@ -2,6 +2,9 @@
 
 A Founder & CEO Assistant BOT for Rui @ Juzi.BOT
 
+![logo](docs/images/logo.jpg)
+> image from: https://www.pinterest.com/joen96/
+
 It has the following functions:
 
 - Introduce JuziBot
