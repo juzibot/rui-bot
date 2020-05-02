@@ -23,6 +23,12 @@ It has the following functions:
 
 [Chatbot-0-1 talk](https://github.com/lijiarui/chatbot-zero-to-one/tree/master/live-coding/azure-show-2020)
 
+## Contact Me
+
+If you want to have a bot like this to introduce yourself and your company, you can contact me by scaning the QRCode:
+
+![Contact me](docs/images/rui-bot-github.png)
+
 ## AUTHOR
 
 [Jiarui Li (李佳芮)](https://pre-angel.com/peoples/jiarui-li/) \<rui@juzi.bot\>
