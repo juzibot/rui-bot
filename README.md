@@ -2,8 +2,7 @@
 
 A Founder & CEO Assistant BOT for Rui @ Juzi.BOT
 
-![logo](docs/images/logo.jpg)
-> image from: https://www.pinterest.com/joen96/
+![logo](docs/images/logo.png)
 
 It has the following functions:
 
