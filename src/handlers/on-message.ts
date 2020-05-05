@@ -24,6 +24,9 @@ export default async function onMessage (
 
   if (room) {
     if (await message.mentionSelf() && !atAll(message.text())) {
+      if (isDing(message.text())) {
+        return
+      }
       await jiaruiBot(message)
     }
   } else {
@@ -37,6 +40,14 @@ function atAll (text: string): boolean {
   }
 
   if (/All/.test(text.substr(0, 5))) {
+    return true
+  }
+
+  return false
+}
+
+function isDing (text: string): boolean {
+  if (/ding/.test(text)) {
     return true
   }
 

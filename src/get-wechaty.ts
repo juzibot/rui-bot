@@ -9,6 +9,27 @@ import {
   getMemory,
 }               from './get-memory'
 
+import {
+  Heartbeat,
+  DingDong,
+}               from 'wechaty-plugin-contrib'
+
+const heartOptions = {
+  emoji: {
+    heartbeat: '[爱心]',
+    login:     'Der~ 佳芮小助理上线啦~',
+    ready:     'I’m ready~~~~[玫瑰]',
+  },
+  intervalSeconds: 60 * 60,        // Default: 1 hour - Send emoji for every 1 hour
+  room: '17376996519@chatroom',    // default: filehelper - Contact id who will receive the emoji
+}
+
+const dingOptions = {
+  at   : true,    // default: true - Response to Mention Self (@/at) Message in Room
+  dm   : true,    // default: true - Response to Direct Message
+  room : false,   // default: true - Response to Rooms Message
+}
+
 let wechaty: Wechaty
 
 export function getWechaty (name: string): Wechaty {
@@ -24,6 +45,9 @@ export function getWechaty (name: string): Wechaty {
     memory,
     name,
   })
+
+  wechaty.use(Heartbeat(heartOptions))
+  wechaty.use(DingDong(dingOptions))
 
   return wechaty
 }
