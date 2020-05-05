@@ -16,13 +16,29 @@ export default async function onMessage (
     return
   }
 
+  if (message.type() !== this.Message.Type.Text) {
+    return
+  }
+
   const room = message.room()
 
   if (room) {
-    if (await message.mentionSelf()) {
+    if (await message.mentionSelf() && !atAll(message.text())) {
       await jiaruiBot(message)
     }
   } else {
     await jiaruiBot(message)
   }
+}
+
+function atAll (text: string): boolean {
+  if (/所有人/.test(text.substr(0, 5))) {
+    return true
+  }
+
+  if (/All/.test(text.substr(0, 5))) {
+    return true
+  }
+
+  return false
 }

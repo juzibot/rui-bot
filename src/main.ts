@@ -6,6 +6,10 @@ import { startBot }   from './start-bot'
 import { startFinis } from './start-finis'
 import { startWeb }   from './start-web'
 
+import * as dotenv    from 'dotenv'
+
+dotenv.config()
+
 async function main () {
   log.verbose('main', 'main()')
 
