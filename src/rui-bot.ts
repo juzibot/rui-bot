@@ -60,11 +60,12 @@ export async function jiaruiBot (msg: Message) {
   if (/产品介绍/.test(text)) {
 
     const productLink = 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/rc-upload-1588329077509-2_1588329107373_juzi-wechat-work.pdf'
-    const videoLink = 'https://s3.cn-northwest-1.amazonaws.com.cn/xiaoju-message-payload-bucket/message/5eabfde2902dac007ce66162/1588330824050/5943444666822877866_wxid_5zj4i5htp9ih22_1588330818028_.mp4'
+    // const videoLink = 'https://s3.cn-northwest-1.amazonaws.com.cn/xiaoju-message-payload-bucket/message/5eabfde2902dac007ce66162/1588330824050/5943444666822877866_wxid_5zj4i5htp9ih22_1588330818028_.mp4'
 
+    await msg.say('这是我们的产品介绍：')
     await msg.say(FileBox.fromUrl(productLink, '句子互动企业微信SCRM介绍.pdf'))
-    await msg.say('这是我们简单的产品演示视频')
-    await msg.say(FileBox.fromUrl(videoLink))
+    // await msg.say('这是我们简单的产品演示视频')
+    // await msg.say(FileBox.fromUrl(videoLink))
 
     return
   }
