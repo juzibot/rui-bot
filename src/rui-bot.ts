@@ -56,16 +56,30 @@ export async function jiaruiBot (msg: Message) {
     return
   }
 
-  // introduce juzibot product
-  if (/产品介绍/.test(text)) {
+  // introduce 句客宝
+  if (/句客宝/.test(text)) {
 
     const productLink = 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/rc-upload-1588329077509-2_1588329107373_juzi-wechat-work.pdf'
-    // const videoLink = 'https://s3.cn-northwest-1.amazonaws.com.cn/xiaoju-message-payload-bucket/message/5eabfde2902dac007ce66162/1588330824050/5943444666822877866_wxid_5zj4i5htp9ih22_1588330818028_.mp4'
+    const videoLink = 'https://s3.cn-northwest-1.amazonaws.com.cn/xiaoju-message-payload-bucket/message/5eabfde2902dac007ce66162/1588330824050/5943444666822877866_wxid_5zj4i5htp9ih22_1588330818028_.mp4'
 
-    await msg.say('这是我们的产品介绍：')
-    await msg.say(FileBox.fromUrl(productLink, '句子互动企业微信SCRM介绍.pdf'))
-    // await msg.say('这是我们简单的产品演示视频')
-    // await msg.say(FileBox.fromUrl(videoLink))
+    await msg.say('这是企业微信 SCRM “句客宝” 的介绍：')
+    await msg.say(FileBox.fromUrl(productLink, '句客宝--企业微信SCRM介绍.pdf'))
+    await msg.say('这是企业微信 SCRM “句客宝” 的产品演示视频')
+    await msg.say(FileBox.fromUrl(videoLink))
+
+    return
+  }
+
+  // introduce 句子秒回
+  if (/句子秒回/.test(text)) {
+
+    const productLink = 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/5d3a69aaabbfbd320e1fd453_1582194253314_%E4%BA%A7%E5%93%81%E6%8E%A8%E5%B9%BF%E5%9B%BE.png'
+    const videoLink = 'https://s3.cn-northwest-1.amazonaws.com.cn/xiaoju-message-payload-bucket/message/5d777faef9ee5b7bcc43399e/1588933054486/7149379985390489603_wxid_alfwlcar4q8b22_1588933058229_.mp4'
+
+    await msg.say('这是个人微信管理工具 “句子秒回” 的介绍：')
+    await msg.say(FileBox.fromUrl(productLink))
+    await msg.say('这是个人微信管理工具 “句子秒回” 的产品演示视频')
+    await msg.say(FileBox.fromUrl(videoLink))
 
     return
   }
