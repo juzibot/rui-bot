@@ -20,6 +20,12 @@ export default async function onMessage (
     return
   }
 
+  const contact = message.from()
+
+  if (contact && checkOfficial(contact.id)) {
+    return
+  }
+
   const room = message.room()
 
   if (room) {
@@ -48,6 +54,36 @@ function atAll (text: string): boolean {
 
 function isDing (text: string): boolean {
   if (/ding/.test(text)) {
+    return true
+  }
+
+  return false
+}
+
+function checkOfficial (id: string):boolean {
+  const exceptidList = [
+    'newsapp',
+    'weixin',
+    'qqmail',
+    'filehelper',
+    'fmessage',
+    'tmessage',
+    'qmessage',
+    'lbsapp',
+    'qqsync',
+    'floatbottle',
+    'shakeapp',
+    'medianote',
+    'newsapp',
+    'weibo',
+    'weixinguanhaozhushou',
+    'feedsapp',
+    'qqsafe',
+    'mphelper',
+    'cmb4008205555',
+    'meituanwx']
+
+  if (/^gh_/.test(id) || exceptidList.indexOf(id) > -1) {
     return true
   }
 
