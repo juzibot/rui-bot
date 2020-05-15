@@ -26,13 +26,14 @@ export default async function onMessage (
     return
   }
 
+  if (isDing(message.text())) {
+    return
+  }
+
   const room = message.room()
 
   if (room) {
     if (await message.mentionSelf() && !atAll(message.text())) {
-      if (isDing(message.text())) {
-        return
-      }
       await jiaruiBot(message)
     }
   } else {
