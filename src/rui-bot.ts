@@ -87,7 +87,12 @@ export async function jiaruiBot (msg: Message) {
   }
 
   // Call QnAMaker, answer valuation questions
-  const answer = await qa(msg.text())
+  let answer = [] as any[]
+  try {
+    answer = await qa(msg.text())
+  } catch (error) {
+    log.error('RuiBot', 'onMessage() qa(%s) rejection: %s', msg.text(), error)
+  }
 
   // match valuation questions
   if (answer.length > 0) {
