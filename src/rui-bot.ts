@@ -78,10 +78,28 @@ export async function jiaruiBot (msg: Message) {
     const videoLink = 'https://s3.cn-northwest-1.amazonaws.com.cn/xiaoju-message-payload-bucket/message/5d777faef9ee5b7bcc43399e/1588933054486/7149379985390489603_wxid_alfwlcar4q8b22_1588933058229_.mp4'
 
     await msg.say('这是个人微信管理工具 “句子秒回” 的介绍：')
-    await msg.say(FileBox.fromUrl(productLink))
+    await msg.say(FileBox.fromUrl(productLink, `句子秒回介绍.pdf`))
     await msg.say('这是个人微信管理工具 “句子秒回” 的产品演示视频')
     await msg.say(FileBox.fromUrl(videoLink))
     await msg.say('欢迎来这里注册试用我们的产品: https://wechat.botorange.com')
+
+    return
+  }
+
+  if (/wechaty/.test(text)) {
+
+    const productLink = 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/5c6938760bdf005a52391505_1589804913679_Open%20Source%20Wechaty-rui-share.pdf'
+
+    await msg.say(`Wechaty 是一个帮助你自动化消息处理流程的 RPA 工具。\n
+    它支持的功能包括：接收消息，发送消息、添加好友、为好友备注、接受好友请求、发起群聊、加人入群等功能。\n
+    只需要6行代码，你就可以 通过个人号 搭建一个 微信机器人功能 ，用来自动管理微信消息。\n
+    更多功能包括：\n
+     - 消息处理：关键词回复 \n
+     - 群管理：自动入群，拉人，踢人 \n
+     - 自动处理好友请求 \n
+     - 智能对话：通过简单配置，即可加入智能对话系统，完成指定任务`)
+    await msg.say('想了解更多 wechaty 的开源介绍，可以查看这个pdf介绍哦~')
+    await msg.say(FileBox.fromUrl(productLink, 'Wechaty Opensource Project.pdf'))
 
     return
   }
