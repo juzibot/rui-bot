@@ -88,7 +88,7 @@ export async function jiaruiBot (msg: Message) {
 
   if (/wechaty/.test(text)) {
 
-    const productLink = 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/5c6938760bdf005a52391505_1589804913679_Open%20Source%20Wechaty-rui-share.pdf'
+    const productLink = 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/5c6938760bdf005a52391505_1589810671021_Open%20Source%20Wechaty%20Rui.pdf'
 
     await msg.say(`Wechaty 是一个帮助你自动化消息处理流程的 RPA 工具。\n
     它支持的功能包括：接收消息，发送消息、添加好友、为好友备注、接受好友请求、发起群聊、加人入群等功能。\n
