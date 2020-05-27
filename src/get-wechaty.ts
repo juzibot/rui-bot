@@ -32,7 +32,7 @@ const dingOptions = {
 }
 
 const chatOpsOptions = {
-  at   : false,                   // default: true - Response to Mention Self (@/at) Message in Room
+  at   : true,                    // default: true - Response to Mention Self (@/at) Message in Room
   dm   : true,                    // default: true - Response to Direct Message
   room : '19170717862@chatroom',  // required: room id for ChatOps
 }
