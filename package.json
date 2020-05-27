@@ -38,7 +38,7 @@
     "read-pkg-up": "^7.0.1",
     "simple-qnamaker": "^0.2.4",
     "wechaty": "^0.39.33",
-    "wechaty-plugin-contrib": "^0.2.17",
+    "wechaty-plugin-contrib": "^0.4.7",
     "wechaty-puppet-padplus": "^0.7.15"
   },
   "devDependencies": {

@@ -12,6 +12,7 @@ import {
 import {
   Heartbeat,
   DingDong,
+  ChatOps,
 }               from 'wechaty-plugin-contrib'
 
 const heartOptions = {
@@ -28,6 +29,12 @@ const dingOptions = {
   at   : true,    // default: true - Response to Mention Self (@/at) Message in Room
   dm   : true,    // default: true - Response to Direct Message
   room : false,   // default: true - Response to Rooms Message
+}
+
+const chatOpsOptions = {
+  at   : false,                   // default: true - Response to Mention Self (@/at) Message in Room
+  dm   : true,                    // default: true - Response to Direct Message
+  room : '19170717862@chatroom',  // required: room id for ChatOps
 }
 
 let wechaty: Wechaty
@@ -48,6 +55,7 @@ export function getWechaty (name: string): Wechaty {
 
   wechaty.use(Heartbeat(heartOptions))
   wechaty.use(DingDong(dingOptions))
+  wechaty.use(ChatOps(chatOpsOptions))
 
   return wechaty
 }
