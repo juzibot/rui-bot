@@ -56,10 +56,21 @@ export async function jiaruiBot (msg: Message) {
     return
   }
 
+  // introduce 产品介绍
+  if (/产品介绍/.test(text)) {
+
+    const productLink = 'https://juzi-work-material-prod.s3.cn-northwest-1.amazonaws.com.cn/public/60811b1b-5bf8-44b1-8cca-d87bdbeb9dbf_%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_9101597b-dbd9-4d85-a329-fefc40fdc605.png'
+
+    await msg.say(`我们基于微信生态提供三个不同的产品，分别是 \n- 针对个人微信的句子秒回，可以让多个人同时管理一个微信号，或者一个人同时管理多个微信号，并提供一系列的自动化机器人帮助企业提高运营效率。\n- 针对企业微信的句客宝，一个帮助企业管理用户全生命周期的scrm，从引流、转化、运营三个模块帮助企业更好的管理自己的客户。现在重点在前期的营销引流的数据分析上。\n- 针对开发者的 wechaty 云服务，让开发者通过6行代码，快速搭建自己定制的微信机器人，通过提供安全稳定的云服务，大幅度提高企业的开发效率。`)
+    await msg.say(FileBox.fromUrl(productLink))
+    await msg.say('@我并回复： \n- 回复【句子互动】了解公司信息 \n- 回复【句客宝】了解我们企业微信产品 \n- 回复【句子秒回】了解我们个人微信产品 \n- 回复【wechaty】了解开发者产品 ')
+    return
+  }
+
   // introduce 句客宝
   if (/句客宝/.test(text)) {
 
-    const productLink = 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/rc-upload-1588329077509-2_1588329107373_juzi-wechat-work.pdf'
+    const productLink = 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/5c6938760bdf005a52391505_1590946056017_%E4%BC%81%E5%BE%AESCRM-%E5%8F%A5%E5%AD%90%E4%BA%92%E5%8A%A8.pdf'
     const videoLink = 'https://s3.cn-northwest-1.amazonaws.com.cn/xiaoju-message-payload-bucket/message/5eabfde2902dac007ce66162/1588330824050/5943444666822877866_wxid_5zj4i5htp9ih22_1588330818028_.mp4'
 
     await msg.say('这是企业微信 SCRM “句客宝” 的介绍：')
@@ -78,7 +89,7 @@ export async function jiaruiBot (msg: Message) {
     const videoLink = 'https://s3.cn-northwest-1.amazonaws.com.cn/xiaoju-message-payload-bucket/message/5d777faef9ee5b7bcc43399e/1588933054486/7149379985390489603_wxid_alfwlcar4q8b22_1588933058229_.mp4'
 
     await msg.say('这是个人微信管理工具 “句子秒回” 的介绍：')
-    await msg.say(FileBox.fromUrl(productLink, `句子秒回介绍.pdf`))
+    await msg.say(FileBox.fromUrl(productLink))
     await msg.say('这是个人微信管理工具 “句子秒回” 的产品演示视频')
     await msg.say(FileBox.fromUrl(videoLink))
     await msg.say('欢迎来这里注册试用我们的产品: https://wechat.botorange.com')
