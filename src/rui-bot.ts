@@ -57,7 +57,7 @@ export async function jiaruiBot (msg: Message) {
   }
 
   // introduce 产品介绍
-  if (/产品介绍/.test(text)) {
+  if (/产品介绍|介绍下产品/.test(text)) {
 
     const productLink = 'https://juzi-work-material-prod.s3.cn-northwest-1.amazonaws.com.cn/public/60811b1b-5bf8-44b1-8cca-d87bdbeb9dbf_%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_9101597b-dbd9-4d85-a329-fefc40fdc605.png'
 
