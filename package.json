@@ -1,6 +1,6 @@
 {
   "name": "heroku-wechaty",
-  "version": "0.2.51",
+  "version": "0.2.52",
   "description": "Deploy to Heroku Button for Wechaty",
   "main": "index.js",
   "engines": {
@@ -37,7 +37,7 @@
     "fluent-ffmpeg": "^2.1.2",
     "read-pkg-up": "^7.0.1",
     "simple-qnamaker": "^0.2.4",
-    "wechaty": "^0.39.33",
+    "wechaty": "^0.39.40",
     "wechaty-plugin-contrib": "^0.4.7",
     "wechaty-puppet-padplus": "^0.7.15"
   },
