@@ -39,9 +39,7 @@ export async function jiaruiBot (msg: Message) {
 
   // introduce 李佳芮
   if (/李佳芮/.test(text)) {
-    const intro = `李佳芮，句子互动创始人，连续创业者，微软人工智能最有价值专家（AI MVP），GitHub 7000+ Stars开源项目Wechaty作者，创建并管理了覆盖全球的微信聊天机器人开发者社区，《Chatbot从0到1：对话式交互设计指南》作者。
-
-    句子互动围绕微信生态为客户提供智能营销和销售服务，帮助企业引流并实现转化，客户覆盖教育、保险、大健康等多个领域。获得PreAngel、Plug and Play，Y Combination, TSVC和阿尔法公社多家中美机构投资。曾入选百度AI加速器和 Facebook 大陆首期加速器`
+    const intro = `李佳芮，句子互动创始人，连续创业者，微软人工智能最有价值专家（AI MVP），GitHub 7000+ Stars开源项目Wechaty作者，创建并管理了覆盖全球的微信聊天机器人开发者社区，《Chatbot从0到1：对话式交互设计指南》作者。\n\n句子互动围绕微信生态为客户提供智能营销和销售服务，帮助企业引流并实现转化，客户覆盖教育、保险、大健康等多个领域。获得PreAngel、Plug and Play，Y Combination, TSVC和阿尔法公社多家中美机构投资。曾入选百度AI加速器和 Facebook 大陆首期加速器`
 
     const ruiLink = new UrlLink({
       description : '句子互动创始人 & CEO，连续创业者，《Chatbot 从0到1》作者，微软人工智能最具价值专家 (AI MVP)',
@@ -101,14 +99,7 @@ export async function jiaruiBot (msg: Message) {
 
     const productLink = 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/5c6938760bdf005a52391505_1589810671021_Open%20Source%20Wechaty%20Rui.pdf'
 
-    await msg.say(`Wechaty 是一个帮助你自动化消息处理流程的 RPA 工具。地址见：https://github.com/wechaty/wechaty
-    它支持的功能包括：接收消息，发送消息、添加好友、为好友备注、接受好友请求、发起群聊、加人入群等功能。
-    只需要6行代码，你就可以 通过个人号 搭建一个 微信机器人功能 ，用来自动管理微信消息。\n
-    更多功能包括：
-     - 消息处理：关键词回复
-     - 群管理：自动入群，拉人，踢人
-     - 自动处理好友请求
-     - 智能对话：通过简单配置，即可加入智能对话系统，完成指定任务`)
+    await msg.say(`Wechaty 是一个帮助你自动化消息处理流程的 RPA 工具。地址见：https://github.com/wechaty/wechaty \n它支持的功能包括：接收消息，发送消息、添加好友、为好友备注、接受好友请求、发起群聊、加人入群等功能。\n只需要6行代码，你就可以 通过个人号 搭建一个 微信机器人功能 ，用来自动管理微信消息。\n\n更多功能包括：\n- 消息处理：关键词回复\n- 群管理：自动入群，拉人，踢人\n- 自动处理好友请求\n- 智能对话：通过简单配置，即可加入智能对话系统，完成指定任务`)
     await msg.say('想了解更多 wechaty 的开源介绍，可以查看这个pdf介绍哦~')
     await msg.say(FileBox.fromUrl(productLink, 'Wechaty Opensource Project.pdf'))
 
