@@ -80,6 +80,17 @@ export async function jiaruiBot (msg: Message) {
     return
   }
 
+  // 获取服务码
+  if (/服务码/.test(text)) {
+
+    const imageLink = 'https://s3.cn-northwest-1.amazonaws.com.cn/xiaoju-message-payload-bucket/message/5cd4dbbf454e8b4cc7b4c496/1591087419484/19cccd9f92ef81f02dae4380d0e1010e.jpg'
+
+    await msg.say(FileBox.fromUrl(imageLink))
+    await msg.say('按照图片步骤就可以在手机端获取服务码啦~')
+
+    return
+  }
+
   // introduce 句子秒回
   if (/句子秒回/.test(text)) {
 
