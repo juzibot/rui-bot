@@ -75,7 +75,7 @@ export async function jiaruiBot (msg: Message) {
     await msg.say(FileBox.fromUrl(productLink, '句客宝--企业微信SCRM介绍.pdf'))
     await msg.say('这是企业微信 SCRM “句客宝” 的产品演示视频')
     await msg.say(FileBox.fromUrl(videoLink))
-    await msg.say('欢迎来这里注册试用我们的产品: http://qiwei.juzibot.com')
+    await msg.say('欢迎来这里注册试用我们的产品: https://qiwei.juzibot.com \n\n 小提示：请在PC端打开链接，首次扫码需要企业微信管理员权限哦~')
 
     return
   }
