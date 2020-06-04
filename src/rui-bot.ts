@@ -19,6 +19,29 @@ export async function jiaruiBot (msg: Message) {
   console.info('Jiarui Bot begin to work')
   const text = msg.text()
 
+  // introduce 句客宝
+  if (/wechaty/.test(text)) {
+
+    if (/我/.test(text)) {
+
+      const productLinkRui = 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/5c6938760bdf005a52391505_1589810671021_Open%20Source%20Wechaty%20Rui.pdf'
+
+      await msg.say(`Wechaty 是一个帮助你自动化消息处理流程的 RPA 工具。地址见：https://github.com/wechaty/wechaty \n它支持的功能包括：接收消息，发送消息、添加好友、为好友备注、接受好友请求、发起群聊、加人入群等功能。\n只需要6行代码，你就可以 通过个人号 搭建一个 微信机器人功能 ，用来自动管理微信消息。\n\n更多功能包括：\n- 消息处理：关键词回复\n- 群管理：自动入群，拉人，踢人\n- 自动处理好友请求\n- 智能对话：通过简单配置，即可加入智能对话系统，完成指定任务`)
+      await msg.say('这是@李佳芮 之前分享的的开源内容，可以查看这个pdf了解更多wechaty内容哦~')
+      await msg.say(FileBox.fromUrl(productLinkRui, 'Wechaty Opensource Project.pdf'))
+
+      return
+    }
+
+    const productLink = 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/5c6938760bdf005a52391505_1591265990985_Open%20Source%20Wechaty.pdf'
+
+    await msg.say(`Wechaty 是一个帮助你自动化消息处理流程的 RPA 工具。地址见：https://github.com/wechaty/wechaty \n它支持的功能包括：接收消息，发送消息、添加好友、为好友备注、接受好友请求、发起群聊、加人入群等功能。\n只需要6行代码，你就可以 通过个人号 搭建一个 微信机器人功能 ，用来自动管理微信消息。\n\n更多功能包括：\n- 消息处理：关键词回复\n- 群管理：自动入群，拉人，踢人\n- 自动处理好友请求\n- 智能对话：通过简单配置，即可加入智能对话系统，完成指定任务`)
+    await msg.say('想了解更多 wechaty 的开源介绍，可以查看这个pdf介绍哦~')
+    await msg.say(FileBox.fromUrl(productLink, 'Wechaty Opensource Project.pdf'))
+
+    return
+  }
+
   // introduce 句子互动
   if (/句子互动/.test(text)) {
 
@@ -102,17 +125,6 @@ export async function jiaruiBot (msg: Message) {
     await msg.say('这是个人微信管理工具 “句子秒回” 的产品演示视频')
     await msg.say(FileBox.fromUrl(videoLink))
     await msg.say('欢迎来这里注册试用我们的产品: https://wechat.botorange.com')
-
-    return
-  }
-
-  if (/wechaty/.test(text)) {
-
-    const productLink = 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/5c6938760bdf005a52391505_1589810671021_Open%20Source%20Wechaty%20Rui.pdf'
-
-    await msg.say(`Wechaty 是一个帮助你自动化消息处理流程的 RPA 工具。地址见：https://github.com/wechaty/wechaty \n它支持的功能包括：接收消息，发送消息、添加好友、为好友备注、接受好友请求、发起群聊、加人入群等功能。\n只需要6行代码，你就可以 通过个人号 搭建一个 微信机器人功能 ，用来自动管理微信消息。\n\n更多功能包括：\n- 消息处理：关键词回复\n- 群管理：自动入群，拉人，踢人\n- 自动处理好友请求\n- 智能对话：通过简单配置，即可加入智能对话系统，完成指定任务`)
-    await msg.say('想了解更多 wechaty 的开源介绍，可以查看这个pdf介绍哦~')
-    await msg.say(FileBox.fromUrl(productLink, 'Wechaty Opensource Project.pdf'))
 
     return
   }
