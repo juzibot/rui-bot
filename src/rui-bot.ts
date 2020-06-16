@@ -80,8 +80,8 @@ export async function jiaruiBot (msg: Message) {
   // introduce 产品介绍
   if (/产品介绍|介绍下产品/.test(text)) {
 
-    const productLink1 = 'https://s3.cn-northwest-1.amazonaws.com.cn/xiaoju-message-payload-bucket/message/5d777faef9ee5b7bcc43399e/1592223742151/95b7ecd44e3abe9c167e87bcca7e0686.jpg'
-    const productLink2 = 'https://s3.cn-northwest-1.amazonaws.com.cn/xiaoju-message-payload-bucket/message/5d777faef9ee5b7bcc43399e/1592223878438/f0555d63153c765746a39fd02b4712b5.jpg'
+    const productLink1 = 'https://s3.cn-northwest-1.amazonaws.com.cn/xiaoju-message-payload-bucket/message/5d777faef9ee5b7bcc43399e/1592308622674/2a51caf9ff6fc8aecaee581d442de57c.jpg'
+    const productLink2 = 'https://s3.cn-northwest-1.amazonaws.com.cn/xiaoju-message-payload-bucket/message/5d777faef9ee5b7bcc43399e/1592308735788/5bbf1e8738280dac4e2658f9ebcd7ee7.jpg'
 
     await msg.say(`我们基于微信生态提供三个不同的产品，分别是: \n\n- 针对企业微信的句客宝：一个帮助企业管理用户全生命周期的scrm，从引流、转化、运营三个模块帮助企业更好的管理自己的客户。现在重点在前期的营销引流的数据分析上。\n- 针对个人微信的句子秒回：可以让多个人同时管理一个微信号，或者一个人同时管理多个微信号，并提供一系列的自动化机器人帮助企业提高运营效率。\n- 针对开发者的 wechaty 云服务：让开发者通过6行代码，快速搭建自己定制的微信机器人，通过提供安全稳定的云服务，大幅度提高企业的开发效率。`)
     await msg.say(FileBox.fromUrl(productLink1))
@@ -93,7 +93,7 @@ export async function jiaruiBot (msg: Message) {
   // introduce 句客宝
   if (/句客宝/.test(text)) {
 
-    const productLink = 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/5c6938760bdf005a52391505_1592223575751_%E5%8F%A5%E5%AE%A2%E5%AE%9D%EF%BC%9A%E5%8F%AA%E8%A6%81%E6%83%B3%E5%9C%A8%E5%BE%AE%E4%BF%A1%E4%B8%8A%E5%81%9A%E7%94%9F%E6%84%8F%EF%BC%8C%E5%B0%B1%E8%83%BD%E7%94%A8%E5%BE%97%E4%B8%8A%E6%88%91%E4%BB%AC%E7%9A%84%E4%BA%A7%E5%93%81.pdf'
+    const productLink = 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/5c6938760bdf005a52391505_1592308798131_jukebao.pdf'
     const videoLink = 'https://s3.cn-northwest-1.amazonaws.com.cn/xiaoju-message-payload-bucket/message/5eabfde2902dac007ce66162/1588330824050/5943444666822877866_wxid_5zj4i5htp9ih22_1588330818028_.mp4'
 
     await msg.say('这是企业微信 SCRM “句客宝” 的介绍：')
