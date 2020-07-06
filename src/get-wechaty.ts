@@ -18,8 +18,9 @@ import {
 const heartOptions = {
   emoji: {
     heartbeat: '[爱心]',
-    login:     'Der~ 佳芮小助理上线啦~',
-    ready:     'I’m ready~~~~[玫瑰]',
+    login:     '[太阳]',
+    ready:     '[拳头]',
+    logout:    '[月亮]',
   },
   intervalSeconds: 60 * 60,        // Default: 1 hour - Send emoji for every 1 hour
   room: '17376996519@chatroom',    // default: filehelper - Contact id who will receive the emoji
