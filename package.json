@@ -1,6 +1,6 @@
 {
   "name": "heroku-wechaty",
-  "version": "0.2.62",
+  "version": "0.2.63",
   "description": "Deploy to Heroku Button for Wechaty",
   "main": "index.js",
   "engines": {
@@ -39,7 +39,7 @@
     "simple-qnamaker": "^0.2.4",
     "wechaty": "^0.41.24",
     "wechaty-plugin-contrib": "^0.4.7",
-    "wechaty-puppet-padplus": "^0.7.15"
+    "wechaty-puppet-padplus": "^0.7.30"
   },
   "devDependencies": {
     "@chatie/eslint-config": "^0.8.1",
