@@ -15,12 +15,14 @@ import {
   ChatOps,
 }               from 'wechaty-plugin-contrib'
 
+import { pluginList } from './plugins/mod'
+
 const heartOptions = {
   emoji: {
     heartbeat: '[爱心]',
     login:     '[太阳]',
-    ready:     '[拳头]',
     logout:    '[月亮]',
+    ready:     '[拳头]',
   },
   intervalSeconds: 60 * 60,        // Default: 1 hour - Send emoji for every 1 hour
   room: '17376996519@chatroom',    // default: filehelper - Contact id who will receive the emoji
@@ -54,9 +56,12 @@ export function getWechaty (name: string): Wechaty {
     name,
   })
 
-  wechaty.use(Heartbeat(heartOptions))
-  wechaty.use(DingDong(dingOptions))
-  wechaty.use(ChatOps(chatOpsOptions))
+  wechaty.use(
+    Heartbeat(heartOptions),
+    DingDong(dingOptions),
+    ChatOps(chatOpsOptions),
+    ...pluginList,
+  )
 
   return wechaty
 }

@@ -25,16 +25,13 @@ export async function startWeb (bot: Wechaty): Promise<void> {
         `<h1>Heroku Wechaty Getting Started v${VERSION}</h1>`,
         'Scan QR Code: <br />',
         qrcodeValue + '<br />',
-        '<a href="http://goqr.me/" target="_blank">http://goqr.me/</a><br />',
         '\n\n',
-        '<image src="',
-        'https://api.qrserver.com/v1/create-qr-code/?data=',
+        'https://wechaty.github.io/qrcode/',
         encodeURIComponent(qrcodeValue),
-        '">',
       ].join('')
       return html
     } else if (userName) {
-      return `Heroku Wechaty Getting Started v${VERSION} User ${userName} logined`
+      return `Heroku Wechaty Getting Started v${VERSION} User ${userName} logged in`
     } else {
       return `Heroku Wechaty Getting Started v${VERSION} Hello, come back later please.`
     }
