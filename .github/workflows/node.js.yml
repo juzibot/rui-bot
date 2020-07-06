@@ -27,7 +27,7 @@ jobs:
     - run: npm run build --if-present
     - run: |
         npm test
-        # ./node_modules/.bin/ts-node tests/fixtures/smoke-testing.ts
+        #  ./node_modules/.bin/ts-node tests/fixtures/smoke-testing.ts
       env:
         CI: true
         WECHATY_PLUGIN_INTERCOM_TOKEN: dummy_intercom_token
