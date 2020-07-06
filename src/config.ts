@@ -5,7 +5,7 @@ import readPkgUp from 'read-pkg-up'
 
 export {
   log,
-}               from 'brolog'
+}               from 'wechaty'
 
 const pkg = readPkgUp.sync({ cwd: __dirname })!.packageJson
 export const VERSION = pkg.version
