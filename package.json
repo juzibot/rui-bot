@@ -1,10 +1,10 @@
 {
   "name": "heroku-wechaty",
-  "version": "0.2.63",
+  "version": "0.2.64",
   "description": "Deploy to Heroku Button for Wechaty",
   "main": "index.js",
   "engines": {
-    "node": "10.4.1"
+    "node": "12.0.0"
   },
   "scripts": {
     "build": "wechaty-puppet-install",
