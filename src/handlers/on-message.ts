@@ -30,6 +30,10 @@ export default async function onMessage (
     return
   }
 
+  if (wechatWorkStorage(message.text())) {
+    return
+  }
+
   const room = message.room()
 
   if (room) {
@@ -55,6 +59,14 @@ function atAll (text: string): boolean {
 
 function isDing (text: string): boolean {
   if (/ding/.test(text)) {
+    return true
+  }
+
+  return false
+}
+
+function wechatWorkStorage (text: string): boolean {
+  if (/为保障你的合法权益，在会话开始前，请阅读下列服务须知/.test(text)) {
     return true
   }
 
