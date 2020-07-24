@@ -35,8 +35,8 @@ export async function jiaruiBot (msg: Message) {
 
     const productLink = 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/5c69d090ac3d075a57657ecf_1595579568290_Wechaty%20Opensource%20Project.pdf'
 
-    await msg.say(`Wechaty is a Conversational AI RPA Chatbot SDK for Wechat Individual Account which can help you create a bot in 6 lines of JavaScript, Python, Go, and Java, with cross-platform support including Linux, Windows, MacOS, and Docker. \n\n See：https://github.com/wechaty/wechaty `)
-    await msg.say('See more for the pdf, \n\n Or you can visit the online version: https://bit.ly/3cLDCVm')
+    await msg.say(`Wechaty is a Conversational AI RPA Chatbot SDK for Wechat Individual Account which can help you create a bot in 6 lines of JavaScript, Python, Go, and Java, with cross-platform support including Linux, Windows, MacOS, and Docker. \n\nSee：https://github.com/wechaty/wechaty `)
+    await msg.say('See more for the pdf, \n\nOr you can visit the online version: https://bit.ly/3cLDCVm')
     await msg.say(FileBox.fromUrl(productLink, 'Wechaty Opensource Project.pdf'))
 
     return
@@ -117,7 +117,7 @@ export async function jiaruiBot (msg: Message) {
     await msg.say(FileBox.fromUrl(productLink, '句客宝：只要想在微信上做生意，就能用得上我们的产品.pdf'))
     await msg.say('这是企业微信 SCRM “句客宝” 的产品演示视频')
     await msg.say(FileBox.fromUrl(videoLink))
-    await msg.say('欢迎来这里注册试用我们的产品: https://qiwei.juzibot.com \n\n 小提示：请在PC端打开链接，首次扫码需要企业微信管理员权限哦~')
+    await msg.say('欢迎来这里注册试用我们的产品: https://qiwei.juzibot.com \n\n小提示：请在PC端打开链接，首次扫码需要企业微信管理员权限哦~')
 
     return
   }
