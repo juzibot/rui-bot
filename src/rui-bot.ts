@@ -33,10 +33,10 @@ export async function jiaruiBot (msg: Message) {
       return
     }
 
-    const productLink = 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/5c6938760bdf005a52391505_1591265990985_Open%20Source%20Wechaty.pdf'
+    const productLink = 'https://s3.cn-north-1.amazonaws.com.cn/xiaoju-material/public/5c69d090ac3d075a57657ecf_1595579568290_Wechaty%20Opensource%20Project.pdf'
 
-    await msg.say(`Wechaty 是一个帮助你自动化消息处理流程的 RPA 工具。地址见：https://github.com/wechaty/wechaty \n它支持的功能包括：接收消息，发送消息、添加好友、为好友备注、接受好友请求、发起群聊、加人入群等功能。\n只需要6行代码，你就可以 通过个人号 搭建一个 微信机器人功能 ，用来自动管理微信消息。\n\n更多功能包括：\n- 消息处理：关键词回复\n- 群管理：自动入群，拉人，踢人\n- 自动处理好友请求\n- 智能对话：通过简单配置，即可加入智能对话系统，完成指定任务`)
-    await msg.say('想了解更多 wechaty 的开源介绍，可以查看这个pdf介绍哦~')
+    await msg.say(`Wechaty is a Conversational AI RPA Chatbot SDK for Wechat Individual Account which can help you create a bot in 6 lines of JavaScript, Python, Go, and Java, with cross-platform support including Linux, Windows, MacOS, and Docker. \n\n See：https://github.com/wechaty/wechaty `)
+    await msg.say('See more for the pdf, \n\n Or you can visit the online version: https://bit.ly/3cLDCVm')
     await msg.say(FileBox.fromUrl(productLink, 'Wechaty Opensource Project.pdf'))
 
     return
@@ -57,6 +57,23 @@ export async function jiaruiBot (msg: Message) {
     await msg.say(intro)
     await msg.say('更多详细信息可以点击查看下面的链接：')
     await msg.say(companyLink)
+    return
+  }
+
+  // introduce Jiarui
+  if (/rui/.test(text)) {
+    const intro = `Jiarui Li is the co-founder & CEO of JuziBot, she is a serial tech entrepreneur recognized as one of the Most Valuable Professionals (MVP) in the artificial intelligence (AI) category by Microsoft. \n\nShe is the co-author of Wechaty, an open-source project with over 7400+ stars recognition on GitHub, the framework has created and managed a global chatbot developer community. The community helps developers to make AI ChatBots and connect to each other. Currently, the community covers nearly 10,000 developers focus on chatbot in more than 10 counties, including China, America, England, Australia, Canada and so onJiarui is an expert in product development, design, and operation based on the WeChat platform.\n\nShe’s also the lead author of the book “Chatbot From 0 to 1: Guide to Conversational Interaction Design”  In the past 6 years, Jiarui led a team that provided technology and operational services around WeChat ecosystem to over 100 clients, including Amazon, Tencent, JD.com, Xinhua Net, Lenovo, Microsoft, Philips, Penging.com, etc.`
+
+    const ruiLink = new UrlLink({
+      description : 'Co-founder & CEO of JuziBot, Y Combinator Alumni, Microsoft AI MVP',
+      thumbnailUrl: 'https://pre-angel.com/assets/peoples/jiarui-li/avatar.png',
+      title       : '李佳芮',
+      url         : 'https://mvp.microsoft.com/zh-cn/PublicProfile/5003226?fullName=jiarui%20li',
+    })
+
+    await msg.say(intro)
+    await msg.say('See more:')
+    await msg.say(ruiLink)
     return
   }
 
