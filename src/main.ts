@@ -22,9 +22,11 @@ async function main () {
     startWeb(bot),
   ])
 
-  while (bot.state.on()) {
-    await new Promise(resolve => setTimeout(resolve, 1000))
-  }
+  /**
+   * Do not return until the bot turned off
+   */
+  await bot.state.ready('off')
+
   return 0
 }
 
