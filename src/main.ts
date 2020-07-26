@@ -1,13 +1,11 @@
+import './config'
+
 import {
   log,
-}                     from './config'
-import { getWechaty } from './get-wechaty'
-import { startFinis } from './start-finis'
-import { startWeb }   from './start-web'
+}                     from 'wechaty'
 
-import * as dotenv    from 'dotenv'
-
-dotenv.config()
+import { getWechaty } from './wechaty/mod'
+import { startWeb }   from './web/mod'
 
 async function main () {
   log.verbose('main', 'main()')
@@ -18,7 +16,6 @@ async function main () {
 
   await Promise.all([
     bot.start(),
-    startFinis(bot),
     startWeb(bot),
   ])
 

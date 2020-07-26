@@ -1,13 +1,13 @@
 import Hapi    from '@hapi/hapi'
 import {
   Wechaty,
+  log,
 }               from 'wechaty'
 
 import {
-  log,
   PORT,
   VERSION,
-}             from './config'
+}             from '../config'
 
 export async function startWeb (bot: Wechaty): Promise<void> {
   log.verbose('startWeb', 'startWeb(%s)', bot)

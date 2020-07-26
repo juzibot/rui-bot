@@ -2,12 +2,14 @@ import {
   finis,
   FinisCallback,
 }                   from 'finis'
-import { Wechaty }  from 'wechaty'
+import {
+  Wechaty,
+  log,
+}                   from 'wechaty'
 
 import {
-  log,
   VERSION,
-}           from './config'
+}           from '../config'
 
 let bot: Wechaty
 let FINIS_QUITING = false

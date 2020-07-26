@@ -4,7 +4,7 @@ import {
 
 import {
   log,
-}                 from './config'
+}                 from 'wechaty'
 
 export let memory: MemoryCard
 
