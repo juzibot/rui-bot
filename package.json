@@ -37,6 +37,7 @@
     "fluent-ffmpeg": "^2.1.2",
     "read-pkg-up": "^7.0.1",
     "simple-qnamaker": "^0.2.4",
+    "vorpal-hacker-news": "^1.0.6",
     "wechaty": "^0.41.24",
     "wechaty-plugin-contrib": "^0.14.11",
     "wechaty-puppet-padplus": "^0.7.30",
