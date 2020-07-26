@@ -1,6 +1,6 @@
 {
   "name": "rui-bot",
-  "version": "0.2.75",
+  "version": "0.2.76",
   "description": "A Founder & CEO Assistant BOT for my Boss Rui@Juzi.BOT",
   "main": "index.js",
   "engines": {
