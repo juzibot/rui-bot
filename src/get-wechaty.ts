@@ -15,7 +15,11 @@ import {
   ChatOps,
 }               from 'wechaty-plugin-contrib'
 
-import { pluginList } from './plugins/mod'
+import { pluginList }   from './plugins/mod'
+
+import {
+  RUI_CHATOPS_ROOM_ID,
+}                       from './database'
 
 const heartOptions = {
   emoji: {
@@ -29,15 +33,17 @@ const heartOptions = {
 }
 
 const dingOptions = {
-  at   : true,    // default: true - Response to Mention Self (@/at) Message in Room
-  dm   : true,    // default: true - Response to Direct Message
-  room : false,   // default: true - Response to Rooms Message
+  contact : true,    // default: true - Response to Direct Message
+  mention : false,   // default: true - Response to Mention Self (@/at) Message in Room
+  room    : [        // default: true - Response to Rooms Message
+    /ChatOps/i,
+  ],
 }
 
 const chatOpsOptions = {
-  at   : true,                    // default: true - Response to Mention Self (@/at) Message in Room
-  dm   : true,                    // default: true - Response to Direct Message
-  room : '19170717862@chatroom',  // required: room id for ChatOps
+  contact : true,                  // default: true - Response to Direct Message
+  mention : true,                  // default: true - Response to Mention Self (@/at) Message in Room
+  room    : RUI_CHATOPS_ROOM_ID,   // required: room id for ChatOps
 }
 
 let wechaty: Wechaty
