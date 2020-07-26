@@ -1,7 +1,7 @@
 {
-  "name": "heroku-wechaty",
+  "name": "rui-bot",
   "version": "0.2.75",
-  "description": "Deploy to Heroku Button for Wechaty",
+  "description": "A Founder & CEO Assistant BOT for my Boss Rui@Juzi.BOT",
   "main": "index.js",
   "engines": {
     "node": "12.0.0"
